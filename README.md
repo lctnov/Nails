@@ -16,6 +16,6 @@ Client management & promotion tracking
 
 Technology Stack:
 
-Frontend: ReactJS / Next.js
+Frontend: ViteJS
 
 Integrations: Online payments, email & SMS/Zalo notifications
