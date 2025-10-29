@@ -34,10 +34,10 @@ export default function AboutNails() {
 		sx={{
 			pt: 4,
 			pb: 4,
-			border: '2px solid #4a3e35',  // màu nâu đậm
+			border: '2px solid #4a3e35',
 			borderRadius: '20px',
-			backgroundColor: '#faf7f2',   // nền kem sáng, nổi border
-			boxShadow: '0 4px 20px rgba(74, 62, 53, 0.08)', // bóng nhẹ cùng tone nâu
+			backgroundColor: '#faf7f2',
+			boxShadow: '0 4px 20px rgba(74, 62, 53, 0.08)',
 		}}
 		>
 		<Container maxWidth="xl">

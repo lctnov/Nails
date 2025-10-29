@@ -36,19 +36,24 @@ export default function HeaderServices() {
   return (
     <HeaderServicesContainer
 		sx={{
-			mt: 12,
-			pt: 4,
-			border: '2px solid #4a3e35',  // màu nâu đậm
-			borderRadius: '20px',
-			backgroundColor: '#faf7f2',   // nền kem sáng, nổi border
-			boxShadow: '0 4px 20px rgba(74, 62, 53, 0.08)', // bóng nhẹ cùng tone nâu
+			pt: 12,
+			backgroundColor: '#faf7f2',
 		}}
 		>
 		<Container maxWidth="xl">
 			<Box sx={{ maxWidth: '800px', mx: 'auto', textAlign: 'center' }}>
 			<SectionTitle>Giới thiệu về Nails & Gội</SectionTitle>
-			<Subtitle>Khám phá bộ sưu tập toàn diện các liệu trình chăm sóc móng và tóc của chúng tôi,
-mỗi liệu trình được thiết kế để tôn lên vẻ đẹp tự nhiên và tăng cường sự tự tin của bạn.</Subtitle>
+			<Typography
+				variant="h6"
+				sx={{
+				fontWeight: 700,
+				color: '#4a3e35',
+				marginBottom: '1rem',
+				}}
+			>
+				Khám phá bộ sưu tập toàn diện các liệu trình chăm sóc móng và tóc của chúng tôi,
+				mỗi liệu trình được thiết kế để tôn lên vẻ đẹp tự nhiên và tăng cường sự tự tin của bạn.
+			</Typography>
 			</Box>
 		</Container>
 		</HeaderServicesContainer>

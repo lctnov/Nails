@@ -182,7 +182,7 @@ export default function ProductCard({ service, onSelect }: ProductCardProps) {
             transition: 'all 0.3s ease',
           }}
         >
-          Book Service
+          Đặt dịch vụ
         </Button>
       </Box>
     </StyledCard>

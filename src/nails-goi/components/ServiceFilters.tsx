@@ -1,6 +1,4 @@
-import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
@@ -83,7 +81,7 @@ export default function ServiceFilters({
             letterSpacing: '-0.5px',
           }}
         >
-          Filter by Category
+          Lọc theo danh mục
         </Typography>
         <Typography
           variant="body1"
@@ -96,8 +94,8 @@ export default function ServiceFilters({
             lineHeight: 1.7,
           }}
         >
-          Browse our curated selection of services. Choose from specialized nail designs,
-          premium hair treatments, or our exclusive combo packages for enhanced value.
+          Khám phá danh mục dịch vụ được tuyển chọn kỹ lưỡng của chúng tôi. Lựa chọn từ các thiết kế móng chuyên biệt,
+các liệu trình chăm sóc tóc cao cấp, hoặc các gói combo độc quyền của chúng tôi để nâng cao giá trị.
         </Typography>
       </Box>
 
