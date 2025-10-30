@@ -40,12 +40,6 @@ const DiscountBadge = styled(Box)(({ theme }) => ({
   letterSpacing: '0.5px',
 }));
 
-const ImageContainer = styled(Box)({
-  position: 'relative',
-  paddingBottom: '100%',
-  overflow: 'hidden',
-});
-
 interface ProductCardProps {
   service: Service;
   onSelect?: (service: Service) => void;
@@ -62,23 +56,9 @@ export default function ProductCard({ service, onSelect }: ProductCardProps) {
           sx={{ objectFit: 'cover', width: '100%', height: '100%' }}
         />
         {service.discount > 0 && (
-          <DiscountBadge>
+          <DiscountBadge sx={{ color: '#9a1b0aff' }}>
             -{service.discount}%
           </DiscountBadge>
-        )}
-        {service.isPopular && (
-          <Box sx={{ position: 'absolute', top: 12, left: 12 }}>
-            <Chip
-              label="Popular"
-              size="small"
-              sx={{
-                fontWeight: 700,
-                backgroundColor: '#c9a87d',
-                color: '#fff',
-                letterSpacing: '0.5px',
-              }}
-            />
-          </Box>
         )}
       </Box>
       <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', p: 2 }}>
@@ -88,7 +68,7 @@ export default function ProductCard({ service, onSelect }: ProductCardProps) {
           component="h3"
           sx={{
             fontWeight: 700,
-            height: '2.8em',
+            height: '3em',
             display: '-webkit-box',
             WebkitLineClamp: 2,
             WebkitBoxOrient: 'vertical',
@@ -99,21 +79,6 @@ export default function ProductCard({ service, onSelect }: ProductCardProps) {
           }}
         >
           {service.name}
-        </Typography>
-        <Typography
-          variant="body2"
-          sx={{
-            color: '#8b7b71',
-            mb: 1.5,
-            display: '-webkit-box',
-            WebkitLineClamp: 2,
-            WebkitBoxOrient: 'vertical',
-            overflow: 'hidden',
-            height: '2.5em',
-            lineHeight: 1.6,
-          }}
-        >
-          {service.description}
         </Typography>
         <Typography
           variant="caption"
@@ -136,14 +101,14 @@ export default function ProductCard({ service, onSelect }: ProductCardProps) {
             <Box>
               <Typography
                 variant="body2"
-                sx={{ textDecoration: 'line-through', color: '#a99885' }}
+                sx={{ textDecoration: 'line-through', color: '#86715bff' }}
               >
                 {service.originalPrice.toLocaleString('vi-VN')} ₫
               </Typography>
               <Typography
                 variant="h6"
                 sx={{
-                  color: '#c9a87d',
+                  color: '#7a3623ff',
                   fontWeight: 700,
                 }}
               >
@@ -154,7 +119,7 @@ export default function ProductCard({ service, onSelect }: ProductCardProps) {
             <Typography
               variant="h6"
               sx={{
-                color: '#c9a87d',
+                color: '#7a3623ff',
                 fontWeight: 700,
               }}
             >

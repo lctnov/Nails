@@ -12,6 +12,20 @@ import OutstandingServices from '../components/OutstandingServices';
 import Testimonials from '../components/Testimonials';
 import PriceTable from '../components/PriceTable';
 import AboutNails from '../components/AboutNails';
+import { styled } from '@mui/material/styles';
+
+const StyledHr = styled('hr')({
+  height: '1px',
+  width: '100px',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  marginTop: '1px',
+  marginBottom: '1px',
+  backgroundColor: '#eca74dff',
+  opacity: 0.6,
+  borderRadius: '999px',
+  border: 'none',
+});
 
 export default function Home(props: { disableCustomTheme?: boolean }) {
 
@@ -31,6 +45,8 @@ export default function Home(props: { disableCustomTheme?: boolean }) {
         <Testimonials />
 
         <PriceTable />
+        
+        <StyledHr />
 
         <AboutNails />
 

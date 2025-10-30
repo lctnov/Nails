@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
-const HeaderServicesContainer = styled(Box)(({ theme }) => ({
+const HeaderContactContainer = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#2a2520' : '#faf7f2',
   py: theme.spacing(8),
 }));
@@ -20,9 +20,9 @@ const SectionTitle = styled(Typography)({
 	mb: 2,
 });
 
-export default function HeaderServices() {
+export default function HeaderContact() {
   return (
-    <HeaderServicesContainer
+    <HeaderContactContainer
 		sx={{
 			pt: 12,
 			backgroundColor: '#faf7f2',
@@ -30,7 +30,7 @@ export default function HeaderServices() {
 		>
 		<Container maxWidth="xl">
 			<Box sx={{ maxWidth: '800px', mx: 'auto', textAlign: 'center' }}>
-			<SectionTitle>Giới thiệu về Nails & Gội</SectionTitle>
+			<SectionTitle>Liên hệ với chúng tôi</SectionTitle>
 			<Typography
 				variant="h6"
 				sx={{
@@ -39,12 +39,11 @@ export default function HeaderServices() {
 				marginBottom: '1rem',
 				}}
 			>
-				Khám phá bộ sưu tập toàn diện các liệu trình chăm sóc móng và tóc của chúng tôi,
-				mỗi liệu trình được thiết kế để tôn lên vẻ đẹp tự nhiên và tăng cường sự tự tin của bạn.
+				Chúng tôi rất mong nhận được phản hồi từ bạn. Vui lòng liên hệ với chúng tôi qua bất kỳ kênh nào bên dưới, chúng tôi sẽ phản hồi bạn ngay lập tức.
 			</Typography>
 			</Box>
 		</Container>
-		</HeaderServicesContainer>
+		</HeaderContactContainer>
 
   );
 }

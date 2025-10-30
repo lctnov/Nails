@@ -3,7 +3,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
@@ -16,12 +15,10 @@ import Chip from '@mui/material/Chip';
 import AppTheme from '../../shared-theme/AppTheme';
 import AppAppBar from '../components/AppAppBar';
 import ServiceFilters from '../components/ServiceFilters';
-import ProductCard from '../components/ProductCard';
 import Footer from '../components/Footer';
 import FloatingContactButtons from '../components/FloatingContactButtons';
 import { services, Service } from '../data/services';
 import HeaderServices from '../components/HeaderServices';
-import HeServices from '../components/HeServices';
 
 type FilterCategory = 'all' | 'nail' | 'hair' | 'combo';
 
@@ -35,13 +32,6 @@ export default function Services(props: { disableCustomTheme?: boolean }) {
   const [selectedItems, setSelectedItems] = React.useState<SelectedItem[]>([]);
   const [openDialog, setOpenDialog] = React.useState(false);
   const [dialogService, setDialogService] = React.useState<Service | null>(null);
-
-  const filteredServices = React.useMemo(() => {
-    if (selectedCategory === 'all') {
-      return services;
-    }
-    return services.filter((service) => service.category === selectedCategory);
-  }, [selectedCategory]);
 
   const handleSelectService = (service: Service) => {
     setDialogService(service);
@@ -80,7 +70,6 @@ export default function Services(props: { disableCustomTheme?: boolean }) {
       <CssBaseline enableColorScheme />
       <AppAppBar />
       <Box sx={{ backgroundColor: '#faf7f2', }}>
-        {/* Page Header */}
         {/* <HeServices> */}
         <HeaderServices />
 
@@ -88,33 +77,8 @@ export default function Services(props: { disableCustomTheme?: boolean }) {
         <ServiceFilters
           selectedCategory={selectedCategory}
           onCategoryChange={setSelectedCategory}
+          onServiceSelect={handleSelectService}
         />
-
-        {/* Services Grid */}
-        <Container
-          sx={{
-            py: { xs: 4, sm: 6 },
-          }}
-        >
-          <Grid container spacing={3}>
-            {filteredServices.map((service) => (
-              <Grid item xs={12} sm={6} md={4} key={service.id}>
-                <ProductCard
-                  service={service}
-                  onSelect={handleSelectService}
-                />
-              </Grid>
-            ))}
-          </Grid>
-
-          {filteredServices.length === 0 && (
-            <Box sx={{ textAlign: 'center', py: 6 }}>
-              <Typography variant="h6" color="text.secondary">
-                Không tìm thấy dịch vụ nào
-              </Typography>
-            </Box>
-          )}
-        </Container>
 
         {/* Service Details Dialog */}
         <Dialog
